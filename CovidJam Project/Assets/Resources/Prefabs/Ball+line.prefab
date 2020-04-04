@@ -116,7 +116,7 @@ GameObject:
   m_Layer: 0
   m_Name: Ball+line
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2800000, guid: 01566738a3cb12942ae073c40d9bb241, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -154,7 +154,7 @@ GameObject:
   - component: {fileID: 6093945481901950186}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Kill_Element
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,7 +167,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6093945481901950188}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.002, z: 0}
+  m_LocalPosition: {x: 0, y: -2.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6093945481591547879}
@@ -212,7 +212,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3120479430552973521, guid: beb0b43a3aa22c945a5b32eb8a12735f,
+  m_Sprite: {fileID: -3601613961693005887, guid: 9a2305e0a8558f04d986c828da2fa7c8,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -237,9 +237,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.16753149}
+  m_Offset: {x: 0.024334788, y: 0}
   serializedVersion: 2
-  m_Radius: 1.1674685
+  m_Radius: 0.72433484
 --- !u!50 &6093945481901950187
 Rigidbody2D:
   serializedVersion: 4
@@ -275,8 +275,8 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 1.2707884}
-  m_ConnectedAnchor: {x: 0, y: -0.2312116}
+  m_Anchor: {x: 0, y: 0.75999993}
+  m_ConnectedAnchor: {x: 0, y: -0.120000124}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -574,6 +574,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 6995581244275120515, guid: f0c1722148e2f644da16e3f1bca45fe8,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.002350092
+      objectReference: {fileID: 0}
+    - target: {fileID: 6995581244275120515, guid: f0c1722148e2f644da16e3f1bca45fe8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.32150698
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c1722148e2f644da16e3f1bca45fe8, type: 3}

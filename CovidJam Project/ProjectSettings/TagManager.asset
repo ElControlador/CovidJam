@@ -5,7 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ball
+<<<<<<< HEAD
   - enemigo
+=======
+  - Explosion
+  - Kill_Element
+>>>>>>> 4c11bf6ba8ead346451939f0f82dfcc5a9e4f523
   layers:
   - Default
   - TransparentFX

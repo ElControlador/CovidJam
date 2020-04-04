@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,12 +18,32 @@ public class BoxController : MonoBehaviour
         Debug.Log("OnCollisionEnter2D");
         if (collision.gameObject.tag.Equals("Ball"))
         {
-            gameObject.SetActive(false);
+            background.enabled = false;
             foreach (GameObject g in woodsBroke)
             {
                 g.SetActive(true);
             }
+            //StartCoroutine(deshabilitar());
         }
+    }
+
+    internal void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Explosion"))
+        {            
+            background.enabled = false;
+            foreach (GameObject g in woodsBroke)
+            {
+                g.SetActive(true);
+            }
+            //StartCoroutine(deshabilitar());
+        }
+    }
+
+    private IEnumerator deshabilitar()
+    {
+        yield return new WaitForSeconds(1f);
+        transform.parent.gameObject.SetActive(false);
     }
 
     internal void Awake()
