@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Reset : MonoBehaviour
 {
     private Scene p;
+    private int n;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +20,19 @@ public class Reset : MonoBehaviour
         {
             SceneManager.LoadScene(p.name);
         }
+    }
+
+    public void Reseteo()
+    {
+        p = SceneManager.GetActiveScene();
+
+            SceneManager.LoadScene(p.name);
+    }
+
+    public void Siguiente()
+    {
+        p = SceneManager.GetActiveScene();
+        n = p.buildIndex;
+        SceneManager.LoadScene(n + 1);
     }
 }
