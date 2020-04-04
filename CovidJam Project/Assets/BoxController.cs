@@ -23,7 +23,7 @@ public class BoxController : MonoBehaviour
             {
                 g.SetActive(true);
             }
-            StartCoroutine(deshabilitar());
+            //StartCoroutine(deshabilitar());
         }
     }
 
@@ -36,7 +36,7 @@ public class BoxController : MonoBehaviour
             {
                 g.SetActive(true);
             }
-            StartCoroutine(deshabilitar());
+            //StartCoroutine(deshabilitar());
         }
     }
 

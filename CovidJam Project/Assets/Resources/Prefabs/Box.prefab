@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 5139208834163280350}
   m_Layer: 0
   m_Name: Box
-  m_TagString: Untagged
+  m_TagString: Kill_Element
   m_Icon: {fileID: 2800000, guid: 9f2b7027713c2a740a468a050a368657, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
