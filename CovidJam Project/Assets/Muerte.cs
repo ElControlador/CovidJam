@@ -38,7 +38,7 @@ public class Muerte : MonoBehaviour
                 {
                     Instantiate(muerto, transform.position, Quaternion.identity);
                     Destroy(gameObject);
-                    Destroy(Arma);
+                    
                     hecho = false;
                 }
             }
