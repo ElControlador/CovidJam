@@ -12,12 +12,15 @@ public class BoxController : MonoBehaviour
     internal BoxCollider2D collider;
     internal Rigidbody2D rigidbody;
     public GameObject[] woodsBroke;
+    public GameObject explosion;
 
     internal void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag.Equals("Ball"))
         {
             background.enabled = false;
+            collider.enabled = false;
+            Instantiate(explosion, transform.position, Quaternion.identity, transform.parent);
             foreach (GameObject g in woodsBroke)
             {
                 g.SetActive(true);
@@ -31,6 +34,8 @@ public class BoxController : MonoBehaviour
         if (collision.gameObject.tag.Equals("Explosion"))
         {            
             background.enabled = false;
+            collider.enabled = false;
+            Instantiate(explosion, transform.position, Quaternion.identity, transform.parent);
             foreach (GameObject g in woodsBroke)
             {
                 g.SetActive(true);

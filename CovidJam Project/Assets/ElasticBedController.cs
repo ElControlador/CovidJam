@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ElasticBedController : MonoBehaviour
 {
-    private const float FORCE = 3f;
+    private const float FORCE = 2f;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

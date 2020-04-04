@@ -74,11 +74,12 @@ Transform:
   m_GameObject: {fileID: 1323283329614619026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.63, y: -2.51, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 1.0675, z: 1}
   m_Children:
   - {fileID: 1323283329632712854}
   - {fileID: 1323283328927817619}
   - {fileID: 1323283329827008002}
+  - {fileID: 8155799414094176011}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -120,8 +121,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 8336773281967000394, guid: 409e2d2dbea649e43b53ec1d7bb3a2fe,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -148,6 +150,7 @@ MonoBehaviour:
   action_ratio: {fileID: 1323283328927817617}
   dot: {fileID: 422188710113607958, guid: 4ab6311abcabbf645928563fe01b266e, type: 3}
   dots_parent: {fileID: 1323283329632712853}
+  direction: {x: 0, y: 0, z: 0}
 --- !u!1 &1323283329632712853
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1323283329827008002
 Transform:
   m_ObjectHideFlags: 0
@@ -206,7 +209,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323283329827008014}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.694, y: 0.224, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 2}
   m_Children:
   - {fileID: 3647367685556274084}
@@ -312,6 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 954767fe8dcd0694092840e02be4384f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  padre: {fileID: 1323283329614619026}
 --- !u!1 &3647367685556274091
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,3 +373,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.07986498, y: 0.099389315}
   m_EdgeRadius: 0
+--- !u!1 &7111029088210776354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8155799414094176011}
+  m_Layer: 0
+  m_Name: Punto
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8155799414094176011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7111029088210776354}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.582, y: 0.235, z: 0}
+  m_LocalScale: {x: 0.33333334, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1323283329614619029}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
