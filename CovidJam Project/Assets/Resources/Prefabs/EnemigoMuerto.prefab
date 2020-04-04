@@ -2779,6 +2779,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4803592746114856749}
   - component: {fileID: 4803592746114856748}
+  - component: {fileID: 1645481743769353270}
   - component: {fileID: 2878115472882312965}
   m_Layer: 8
   m_Name: EnemigoMuerto
@@ -2841,6 +2842,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.082303, y: 9.776988}
   m_EdgeRadius: 0
+--- !u!114 &1645481743769353270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4803592746114856914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c90c2bc43d18fc74fa6de5f9c7d879b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &2878115472882312965
 Rigidbody2D:
   serializedVersion: 4
