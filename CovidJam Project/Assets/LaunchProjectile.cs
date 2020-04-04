@@ -149,7 +149,7 @@ public class LaunchProjectile : MonoBehaviour
             if (is_mouse_down)
             {
                 direction = (initial_mouse_pointer - Input.mousePosition).normalized;
-                //launch_velocity = direction * VELOCITY;                
+                launch_velocity = direction * VELOCITY;                
 
                 Debug.Log(direction);
             }
