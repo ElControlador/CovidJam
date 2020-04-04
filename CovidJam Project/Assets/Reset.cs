@@ -7,10 +7,12 @@ public class Reset : MonoBehaviour
 {
     private Scene p;
     private int n;
+    public static bool pause = false;
     // Start is called before the first frame update
     void Start()
     {
         p = SceneManager.GetActiveScene();
+        
     }
 
     // Update is called once per frame
@@ -34,5 +36,9 @@ public class Reset : MonoBehaviour
         p = SceneManager.GetActiveScene();
         n = p.buildIndex;
         SceneManager.LoadScene(n + 1);
+    }
+    public void pausa()
+    {
+        pause = true;
     }
 }
