@@ -17,23 +17,23 @@ public class colision_ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer = timer + Time.deltaTime;
-        if(timer > 0.2)
-        {
-            timer = 0;
-        }
+       // timer = timer + Time.deltaTime;
+        //if(timer > 0.2)
+       // {
+         //   timer = 0;
+        //}
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("tilemap") || collision.gameObject.CompareTag("Kill_Element"))
         {
-            if(timer > 0.1)
-            {
+           // if(timer > 0.1)
+            //{
                 padre.SetActive(false);
                 padre.transform.position = posini;
                 gameObject.transform.position = posini;
                 padre.SetActive(true);
-            }
+            //}
             // Destroy(gameObject);
         }
     }
