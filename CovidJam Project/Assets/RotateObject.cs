@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Giro : MonoBehaviour
+public class RotateObject : MonoBehaviour
 {
     // Update is called once per frame
     void Update()
@@ -24,6 +24,6 @@ public class Giro : MonoBehaviour
         Vector2 direction = (mouseScreenPosition - (Vector2)transform.position).normalized;
 
         // set vector of transform directly
-        transform.right = -direction;
+        transform.right = direction;
     }
 }

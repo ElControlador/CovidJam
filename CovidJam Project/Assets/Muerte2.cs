@@ -7,12 +7,14 @@ public class Muerte2 : MonoBehaviour
     public GameObject muerto;
     private GameObject Arma;
     private Transform personaje;
+    private Transform Enemy;
     private bool hecho = true;
     // Start is called before the first frame update
     void Start()
     {
         Arma = GameObject.Find("Arma");
         personaje = GameObject.Find("Personaje").GetComponent<Transform>();
+        Enemy = GameObject.Find("Enemy").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -25,7 +27,10 @@ public class Muerte2 : MonoBehaviour
             {
                 Instantiate(muerto, personaje.position, Quaternion.identity);
                 Destroy(gameObject);
-                Destroy(Arma);
+                if (Arma.transform.IsChildOf(Enemy))
+                {
+                    Destroy(Arma);
+                }
                 hecho = false;
             }
         }
