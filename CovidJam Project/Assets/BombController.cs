@@ -19,7 +19,10 @@ public class BombController : MonoBehaviour
             spriteRenderer.enabled = false;
             collider2D.isTrigger = true;
             Instantiate(explosion, transform.position, Quaternion.identity, transform.parent);
-            StartCoroutine(camera.shakeCamera(.15f, .4f));
+            if(camera != null)
+            {
+                StartCoroutine(camera.shakeCamera(.15f, .4f));
+            }
         }
     }
 

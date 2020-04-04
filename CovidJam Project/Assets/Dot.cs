@@ -13,7 +13,6 @@ public class Dot : MonoBehaviour
 
     public void setOpacity(float value)
     {
-        Debug.Log(value);
         spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, value);
     }
 }
