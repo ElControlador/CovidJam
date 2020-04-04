@@ -11,7 +11,7 @@ public class Giro : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        launchproyectile = GameObject.Find("Arma").GetComponent<LaunchProjectile>();
+        launchproyectile = GameObject.Find("Player").GetComponent<LaunchProjectile>();
         punto = GameObject.Find("Punto").GetComponent<Transform>();
     }
 
