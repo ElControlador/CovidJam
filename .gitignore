@@ -2,3 +2,7 @@
 CovidJam Project/Temp/UnityLockfile
 /CovidJam Project/Library
 /CovidJam Project/Logs
+/CovidJam Project/obj
+/CovidJam Project/*.sln
+/CovidJam Project/*.csproj
+/CovidJam Project/.vs
