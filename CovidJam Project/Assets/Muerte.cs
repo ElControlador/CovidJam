@@ -5,11 +5,12 @@ using UnityEngine;
 public class Muerte : MonoBehaviour
 {
     public GameObject muerto;
+    private GameObject Arma;
     private bool hecho=true;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Arma = GameObject.Find("Arma");
     }
 
     // Update is called once per frame
@@ -22,6 +23,7 @@ public class Muerte : MonoBehaviour
             {
                 Instantiate(muerto, transform.position, Quaternion.identity);
                 Destroy(gameObject);
+                Destroy(Arma);
                 hecho = false;
             }
         }
@@ -36,6 +38,7 @@ public class Muerte : MonoBehaviour
                 {
                     Instantiate(muerto, transform.position, Quaternion.identity);
                     Destroy(gameObject);
+                    Destroy(Arma);
                     hecho = false;
                 }
             }
