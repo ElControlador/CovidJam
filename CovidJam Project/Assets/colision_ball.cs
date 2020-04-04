@@ -25,7 +25,7 @@ public class colision_ball : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("tilemap") || collision.gameObject.CompareTag("Kill_Element") || collision.gameObject.CompareTag("bomba"))
+        if (collision.gameObject.CompareTag("tilemap") || collision.gameObject.CompareTag("Kill_Element"))
         {
             if(timer > 0.1)
             {
