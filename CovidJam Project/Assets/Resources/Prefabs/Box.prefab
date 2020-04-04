@@ -697,7 +697,6 @@ GameObject:
   - component: {fileID: 2308952038377242213}
   - component: {fileID: 8123406291909273856}
   - component: {fileID: 7152437400852829552}
-  - component: {fileID: 3258165149205240767}
   - component: {fileID: 2644422187791829923}
   m_Layer: 0
   m_Name: Box
@@ -822,30 +821,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!233 &3258165149205240767
-HingeJoint2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5947085899322223610}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: 0, y: 0.665}
-  m_ConnectedAnchor: {x: 0, y: 0.665}
-  m_UseMotor: 0
-  m_Motor:
-    m_MotorSpeed: 0
-    m_MaximumMotorForce: 10000
-  m_UseLimits: 0
-  m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
 --- !u!114 &2644422187791829923
 MonoBehaviour:
   m_ObjectHideFlags: 0
