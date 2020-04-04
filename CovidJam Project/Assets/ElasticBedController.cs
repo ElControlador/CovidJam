@@ -8,7 +8,6 @@ public class ElasticBedController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("agregar fuerza");
         if (!collision.gameObject.tag.Equals("Elastic_Bed"))
         {
             if (collision != null)

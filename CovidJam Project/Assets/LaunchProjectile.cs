@@ -19,6 +19,10 @@ public class LaunchProjectile : MonoBehaviour
     /// Cada cuanto tiempo se va a dibujar el punto ...
     /// </summary>
     private const float DOT_TIME_STEP = .1f;
+    /// <summary>
+    /// Velocidad maxima.
+    /// </summary>
+    private float VELOCITY = 8f;
     #endregion
 
     #region Variables Privadas
@@ -73,6 +77,11 @@ public class LaunchProjectile : MonoBehaviour
     /// Donde se almacenara los puntos de la traywctoria
     /// </summary>
     public GameObject dots_parent;
+    /// <summary>
+    /// direccion
+    /// </summary>
+    public Vector3 direction;
+
     #endregion
 
 
@@ -101,6 +110,14 @@ public class LaunchProjectile : MonoBehaviour
 
     private void Update()
     {
+        if (!is_launched)
+        {
+            if (initial_position != ball.position)
+            {
+                initial_position = ball.position;
+            }
+        }
+
         if(ball_rigidBody.velocity == Vector2.zero)
         {
             if (ball.gameObject.activeSelf)
@@ -118,7 +135,6 @@ public class LaunchProjectile : MonoBehaviour
                         initial_mouse_pointer = Input.mousePosition;
                         is_mouse_down = true;
                         dots_parent.SetActive(true);
-                        Debug.Log("initilaPointer:" + initial_mouse_pointer);
                     }
                 }    
             }
@@ -132,13 +148,12 @@ public class LaunchProjectile : MonoBehaviour
 
             if (is_mouse_down)
             {
-                Debug.Log(initial_mouse_pointer - Input.mousePosition);
-                float distance = Mathf.Abs(Vector3.Distance(initial_mouse_pointer, Input.mousePosition));
+                direction = (initial_mouse_pointer - Input.mousePosition).normalized;
+                launch_velocity = direction * VELOCITY;
 
-                launch_velocity = (initial_mouse_pointer - Input.mousePosition) / 10;
+                Debug.Log(direction);
 
                 DrawTrajectory();
-
             }
 
             if (is_launched)
@@ -169,10 +184,6 @@ public class LaunchProjectile : MonoBehaviour
         {
             GameObject trajectoryDot = dots[i];
             trajectoryDot.transform.position = CalculatePosition(DOT_TIME_STEP * i);
-            if (gameObject.CompareTag("enemigo"))
-            {
-                trajectoryDot.transform.rotation = new Quaternion(180, trajectoryDot.transform.rotation.y, trajectoryDot.transform.rotation.z, trajectoryDot.transform.rotation.w);
-            }
         }
     }
 
@@ -194,6 +205,6 @@ public class LaunchProjectile : MonoBehaviour
     private Vector2 CalculatePosition(float elapsedTime)
     {
         return gravity * elapsedTime * elapsedTime * 0.5f +
-                   launch_velocity * elapsedTime + initial_position;
+                   ((gameObject.CompareTag("enemigo")) ? (new Vector3(launch_velocity.x * -1, launch_velocity.y)) : launch_velocity) * elapsedTime + initial_position;
     }
 }

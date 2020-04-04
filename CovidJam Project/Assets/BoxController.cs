@@ -15,7 +15,6 @@ public class BoxController : MonoBehaviour
 
     internal void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("OnCollisionEnter2D");
         if (collision.gameObject.tag.Equals("Ball"))
         {
             background.enabled = false;
