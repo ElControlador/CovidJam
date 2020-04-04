@@ -45,7 +45,7 @@ public class LaunchProjectile : MonoBehaviour
     /// <summary>
     /// Cuerpo rigido del proyectil
     /// </summary>
-    private Rigidbody2D ball_rigidBody;
+    public Rigidbody2D ball_rigidBody;
     /// <summary>
     /// Para indicar si se tiene el mouse pulsado o no
     /// </summary>
@@ -81,7 +81,8 @@ public class LaunchProjectile : MonoBehaviour
     /// direccion
     /// </summary>
     public Vector3 direction;
-
+    public float Angulo;
+    public Transform body;
     #endregion
 
 
@@ -110,6 +111,10 @@ public class LaunchProjectile : MonoBehaviour
 
     private void Update()
     {
+        
+
+        launch_velocity = direction.normalized * VELOCITY;
+
         if (!is_launched)
         {
             if (initial_position != ball.position)
@@ -126,18 +131,18 @@ public class LaunchProjectile : MonoBehaviour
                 ball.position = initial_position;
             }
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                if (CheckPointerIsInRatio(Input.mousePosition))
-                {
-                    if (!is_mouse_down)
-                    {
-                        initial_mouse_pointer = Input.mousePosition;
-                        is_mouse_down = true;
-                        dots_parent.SetActive(true);
-                    }
-                }    
-            }
+            //if (Input.GetMouseButtonDown(0))
+            //{
+            //    //if (CheckPointerIsInRatio(Input.mousePosition))
+            //    //{
+            //        if (!is_mouse_down)
+            //        {
+            //            initial_mouse_pointer = Input.mousePosition;
+            //            is_mouse_down = true;
+            //            dots_parent.SetActive(true);
+            //        }
+            //    //}    
+            //}
 
             if (Input.GetMouseButtonUp(0))
             {
@@ -146,13 +151,18 @@ public class LaunchProjectile : MonoBehaviour
                 dots_parent.SetActive(false);
             }
 
-            if (is_mouse_down)
-            {
-                direction = (initial_mouse_pointer - Input.mousePosition).normalized;
-                launch_velocity = direction * VELOCITY;                
+            //if (is_mouse_down)
+            //{
+            
 
-                Debug.Log(direction);
-            }
+            //if (!dots_parent.activeSelf)
+            //{
+            //    dots_parent.SetActive(true);
+            // StartCoroutine(DrawTrajectory());
+            //}
+
+            Debug.Log(direction);
+            //}
 
             if (is_launched)
             {
@@ -176,12 +186,13 @@ public class LaunchProjectile : MonoBehaviour
         return false;
     }
 
-    private void DrawTrajectory()
+    private IEnumerator DrawTrajectory()
     {
         for (int i = 0; i < NUM_DOTS_TO_SHOW; i++)
         {
             GameObject trajectoryDot = dots[i];
             trajectoryDot.transform.position = CalculatePosition(DOT_TIME_STEP * i);
+            yield return null;
         }
     }
 
