@@ -12,17 +12,19 @@ public class LinkController : MonoBehaviour
         if (collision.gameObject.tag.Equals("Ball"))
         {
             hingeJoint.enabled = false;
-            StartCoroutine(deshabilitar());
+            //StartCoroutine(deshabilitar());
             // boxCollider2D.enabled = false;
         }
     }
 
     internal void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("Explosion"))
+        if (collision.gameObject.tag.Equals("Ball") ||
+            collision.gameObject.tag.Equals("Explosion"))
         {
+            boxCollider2D.isTrigger = false;
             hingeJoint.enabled = false;
-            StartCoroutine(deshabilitar());
+            //StartCoroutine(deshabilitar());
             // boxCollider2D.enabled = false;
         }
     }

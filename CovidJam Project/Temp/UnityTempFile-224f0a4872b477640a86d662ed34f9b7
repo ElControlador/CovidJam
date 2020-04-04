@@ -78,9 +78,6 @@
 /reference:Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll
 /reference:Library/ScriptAssemblies/Unity.TextMeshPro.dll
 /reference:Library/ScriptAssemblies/UnityEditor.UI.dll
-/reference:"C:/Program Files/Unity/Hub/Editor/2019.3.6f1/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.iOS.Extensions.Xcode.dll"
-/reference:"C:/Program Files/Unity/Hub/Editor/2019.3.6f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll"
-/reference:"C:/Program Files/Unity/Hub/Editor/2019.3.6f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll"
 /reference:"C:/Program Files/Unity/Hub/Editor/2019.3.6f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll"
 /reference:"C:/Program Files/Unity/Hub/Editor/2019.3.6f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/Microsoft.Win32.Primitives.dll"
 /reference:"C:/Program Files/Unity/Hub/Editor/2019.3.6f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.AppContext.dll"
@@ -214,8 +211,6 @@
 /define:UNITY_2019_1_OR_NEWER
 /define:UNITY_2019_2_OR_NEWER
 /define:UNITY_2019_3_OR_NEWER
-/define:PLATFORM_ARCH_64
-/define:UNITY_64
 /define:UNITY_INCLUDE_TESTS
 /define:ENABLE_AR
 /define:ENABLE_AUDIO
@@ -293,7 +288,9 @@
 /define:ENABLE_LEGACY_INPUT_MANAGER
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
+Assets\BombController.cs
 Assets\BoxController.cs
 Assets\Dot.cs
+Assets\ExplosionController.cs
 Assets\LaunchProjectile.cs
 Assets\LinkController.cs

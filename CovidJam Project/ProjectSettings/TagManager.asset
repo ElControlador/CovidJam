@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ball
   - Explosion
+  - Kill_Element
   layers:
   - Default
   - TransparentFX
