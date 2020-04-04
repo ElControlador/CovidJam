@@ -524,6 +524,7 @@ MonoBehaviour:
   action_ratio: {fileID: 1407914681}
   dot: {fileID: 422188710113607958, guid: 4ab6311abcabbf645928563fe01b266e, type: 3}
   dots_parent: {fileID: 971994557}
+  direction: {x: 0, y: 0, z: 0}
 --- !u!212 &956001468
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2201,7 +2202,7 @@ PrefabInstance:
     - target: {fileID: 4514365182137168412, guid: a740975897fde9d44bf635926c199222,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0.0117845535
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a740975897fde9d44bf635926c199222, type: 3}
@@ -2225,12 +2226,12 @@ PrefabInstance:
     - target: {fileID: 5139208834163280350, guid: a980e8f20f315cf4cb4b3e8ec14d5a99,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.46
+      value: -6.94
       objectReference: {fileID: 0}
     - target: {fileID: 5139208834163280350, guid: a980e8f20f315cf4cb4b3e8ec14d5a99,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.49
+      value: -3.29
       objectReference: {fileID: 0}
     - target: {fileID: 5139208834163280350, guid: a980e8f20f315cf4cb4b3e8ec14d5a99,
         type: 3}
@@ -2320,12 +2321,12 @@ PrefabInstance:
     - target: {fileID: 3027961945926459975, guid: b7915422740f47143bfb3962e4ae5483,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0.011784792
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3027961945926459975, guid: b7915422740f47143bfb3962e4ae5483,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -0.31275368
+      value: -0.2750001
       objectReference: {fileID: 0}
     - target: {fileID: 3413471338356853144, guid: b7915422740f47143bfb3962e4ae5483,
         type: 3}

@@ -5,9 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ball
-  - Explosion
+  - enemigo
   - Kill_Element
-  - Elastic_Bed
+  - tilemap
   layers:
   - Default
   - TransparentFX
@@ -17,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - Personaje
+  - 
   - 
   - 
   - 

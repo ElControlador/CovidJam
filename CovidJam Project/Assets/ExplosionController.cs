@@ -6,6 +6,6 @@ public class ExplosionController : MonoBehaviour
 {
     public void endAnimation()
     {
-        transform.parent.gameObject.SetActive(false);
+        transform.gameObject.SetActive(false);
     }
 }
