@@ -4,22 +4,26 @@ using UnityEngine;
 
 public class Giro : MonoBehaviour
 {
-    public Vector3 Position;
-    public float ffd;
-    private Transform punto;
-    private LaunchProjectile launchproyectile;
-    // Start is called before the first frame update
-    void Start()
-    {
-        launchproyectile = GameObject.Find("Player").GetComponent<LaunchProjectile>();
-        punto = GameObject.Find("Punto").GetComponent<Transform>();
-    }
-
     // Update is called once per frame
     void Update()
     {
-        Position = launchproyectile.direction;
-        ffd = Vector3.Angle(punto.position, Position);
-        transform.rotation = Quaternion.Euler(0, 0, Vector3.Angle(punto.position, Position));
+        //transform.right = Input.mousePosition;
+
+        //var dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+        //var angle = Mathf.Atan2(dir.x, dir.y) * Mathf.Rad2Deg;
+        //transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        //float AngleRad = Mathf.Atan2(Input.mousePosition.y - transform.position.y, Input.mousePosition.x - transform.position.x);
+        //float AngleDeg = (180 / Mathf.PI) * AngleRad;
+        //this.transform.rotation = Quaternion.Euler(0, 0, AngleDeg);
+
+        // convert mouse position into world coordinates
+        Vector2 mouseScreenPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        // get direction you want to point at
+        Vector2 direction = (mouseScreenPosition - (Vector2)transform.position).normalized;
+
+        // set vector of transform directly
+        transform.right = -direction;
     }
 }
