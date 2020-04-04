@@ -169,14 +169,26 @@ public class LaunchProjectile : MonoBehaviour
         {
             GameObject trajectoryDot = dots[i];
             trajectoryDot.transform.position = CalculatePosition(DOT_TIME_STEP * i);
+            if (gameObject.CompareTag("enemigo"))
+            {
+                trajectoryDot.transform.rotation = new Quaternion(180, trajectoryDot.transform.rotation.y, trajectoryDot.transform.rotation.z, trajectoryDot.transform.rotation.w);
+            }
         }
     }
 
     private void Launch()
     {
         ball.gameObject.SetActive(true);
-        ball_rigidBody.velocity = launch_velocity;
-        is_launched = false;
+        if (gameObject.CompareTag("enemigo"))
+        {
+            ball_rigidBody.velocity = new Vector2(-launch_velocity.x, launch_velocity.y);
+            is_launched = false;
+        }
+        else
+        {
+            ball_rigidBody.velocity = launch_velocity;
+            is_launched = false;
+        }
     }
 
     private Vector2 CalculatePosition(float elapsedTime)
