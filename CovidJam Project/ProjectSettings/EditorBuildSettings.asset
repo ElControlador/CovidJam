@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/nivel1.unity
     guid: f20a64aa4c454ec4cab95eac7a097240
   - enabled: 1
+    path: Assets/Scenes/nivel 5.unity
+    guid: 8729b7dcce7701a44881c162f6003c51
+  - enabled: 1
     path: Assets/Scenes/nivel2.unity
     guid: f97a9972d3b4a3a44a0ede732bf24867
   - enabled: 1
@@ -32,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/nivel4.unity
     guid: 28d653b02836d7647bd4bfdb76c6a594
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: 64492b1c58987cc478ce5a8ab0053c82
   m_configObjects: {}
