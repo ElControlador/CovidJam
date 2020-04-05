@@ -17,7 +17,7 @@ public class Muerte : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ball"))
+        if (collision.gameObject.CompareTag("Ball") || collision.gameObject.CompareTag("Kill_Element"))
         {
             if (hecho)
             {
@@ -31,7 +31,7 @@ public class Muerte : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     
         {
-            if (collision.gameObject.CompareTag("Explosion"))
+            if (collision.gameObject.CompareTag("Explosion") || collision.gameObject.CompareTag("Kill_Element"))
             {
                 if (hecho)
                 {
