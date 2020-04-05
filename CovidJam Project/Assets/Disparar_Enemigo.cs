@@ -2,26 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Disparar : MonoBehaviour
+public class Disparar_Enemigo : MonoBehaviour
 {
     public Transform ball;
     public Rigidbody2D ball_rigidBody;
     public GameObject dots;
-    public static bool is_launched_bplayer;
+    public static bool is_launched_benemigo;
     private float VELOCITY = 24f;
 
     private void Awake()
     {
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         if (Input.GetMouseButtonUp(0))
         {
-            is_launched_bplayer = true;
+            is_launched_benemigo = true;
         }
 
-        if (is_launched_bplayer)
+        if (is_launched_benemigo)
         {
             Launch();
         }
