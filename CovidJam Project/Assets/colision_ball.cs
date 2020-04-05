@@ -5,13 +5,16 @@ using UnityEngine;
 public class colision_ball : MonoBehaviour
 {
     // Start is called before the first frame update
-    private Vector3 posini;
+    
     public GameObject padre;
-    private float timer;
+    public GameObject pistolero;
+    public GameObject posreturn;
+    public GameObject dots;
+
     void Start()
     {
-        posini = new Vector3(padre.transform.position.x, padre.transform.position.y, padre.transform.position.z);
-        timer = 0;
+        
+       // timer = 0;
     }
 
     // Update is called once per frame
@@ -29,11 +32,19 @@ public class colision_ball : MonoBehaviour
         {
            // if(timer > 0.1)
             //{
-                padre.SetActive(false);
-                padre.transform.position = posini;
-                gameObject.transform.position = posini;
-                Disparar.is_launched = false;
-                padre.SetActive(true);
+            padre.SetActive(false);
+            padre.transform.position = posreturn.transform.position;
+            gameObject.transform.position = posreturn.transform.position;
+            if (pistolero.CompareTag("enemigo"))
+            {
+                Disparar_Enemigo.is_launched_benemigo = false;
+            }
+            else
+            {
+                Disparar.is_launched_bplayer = false;
+            }
+            dots.gameObject.SetActive(true);
+                
             //}
             // Destroy(gameObject);
         }
