@@ -21,9 +21,13 @@ public class Disparar : MonoBehaviour
             is_launched_bplayer = true;
         }
 
-        if (is_launched_bplayer)
+        if (is_launched_bplayer && Reset.pausado == false)
         {
             Launch();
+        }
+        if(Reset.pausado == true)
+        {
+            is_launched_bplayer = false;
         }
     }
 

@@ -8,6 +8,7 @@ public class Reset : MonoBehaviour
     private Scene p;
     private int n;
     public GameObject Pause;
+    public static bool pausado = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +33,8 @@ public class Reset : MonoBehaviour
     public void Reseteo()
     {
         p = SceneManager.GetActiveScene();
-
-            SceneManager.LoadScene(p.name);
+        pausado = false;
+        SceneManager.LoadScene(p.name);
     }
 
     public void Siguiente()
@@ -45,6 +46,7 @@ public class Reset : MonoBehaviour
     public void pausa()
     {
         Time.timeScale = 0f;
+        pausado = true;
         Pause.SetActive(true);
     }
 
@@ -56,6 +58,7 @@ public class Reset : MonoBehaviour
     public void resume()
     {
         Time.timeScale = 1f;
+        pausado = false;
         Pause.SetActive(false);
     }
 }

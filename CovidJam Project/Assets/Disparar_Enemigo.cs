@@ -9,22 +9,34 @@ public class Disparar_Enemigo : MonoBehaviour
     public GameObject dots;
     public static bool is_launched_benemigo;
     private float VELOCITY = 24f;
-
-    private void Awake()
+    //private float timer;
+    private void Start()
     {
+        Time.timeScale = 1f;
+        /*timer = 0;
+        while(timer <= 1)
+        {
+           timer = timer + Time.deltaTime;
+        }*/
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonUp(0))
-        {
-            is_launched_benemigo = true;
-        }
+      
+            if (Input.GetMouseButtonUp(0))
+            {
+                is_launched_benemigo = true;
+            }
 
-        if (is_launched_benemigo)
-        {
-            Launch();
-        }
+            if (is_launched_benemigo && Reset.pausado == false)
+            {
+                Launch();
+            }
+            if (Reset.pausado == true)
+            {
+                is_launched_benemigo = false;
+            }
+        
     }
 
 
