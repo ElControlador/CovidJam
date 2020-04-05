@@ -47,4 +47,15 @@ public class Reset : MonoBehaviour
         Time.timeScale = 0f;
         Pause.SetActive(true);
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
+    public void resume()
+    {
+        Time.timeScale = 1f;
+        Pause.SetActive(false);
+    }
 }
