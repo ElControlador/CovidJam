@@ -11,10 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Titulo.unity
     guid: f1f8698368ebb7a498c25f46d7ab5f03
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AlejandroCampoDePruebas.unity
     guid: 4a2dae802d64f3f408c1bb608f15adfd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/main_game.unity
+    guid: 2fdd91e729d31fb4c8b5a9074205181e
+  - enabled: 1
+    path: Assets/Scenes/nivel2.unity
+    guid: f97a9972d3b4a3a44a0ede732bf24867
+  - enabled: 1
+    path: Assets/Scenes/nivel3.unity
+    guid: 4ffb0735d819dfd4eba19279399627f5
   m_configObjects: {}

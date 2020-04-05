@@ -14,7 +14,7 @@ public class BombController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag.Equals("Ball"))
+        if (collision.gameObject.tag.Equals("Ball") || collision.gameObject.tag.Equals("Kill_Element"))
         {
             spriteRenderer.enabled = false;
             collider2D.isTrigger = true;
