@@ -9,6 +9,7 @@ public class colision_ball : MonoBehaviour
     public GameObject padre;
     public GameObject pistolero;
     public GameObject posreturn;
+    public GameObject sangre;
     public GameObject dots;
 
     void Start()
@@ -28,10 +29,14 @@ public class colision_ball : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("tilemap") || collision.gameObject.CompareTag("Kill_Element"))
+        if (collision.gameObject.CompareTag("tilemap") || collision.gameObject.CompareTag("Kill_Element") || collision.gameObject.CompareTag("enemigo") || collision.gameObject.CompareTag("Player"))
         {
            // if(timer > 0.1)
             //{
+            if(collision.gameObject.CompareTag("enemigo") || collision.gameObject.CompareTag("Player"))
+            {
+                Instantiate(sangre, gameObject.transform.position, Quaternion.identity);
+            }
             padre.SetActive(false);
             padre.transform.position = posreturn.transform.position;
             gameObject.transform.position = posreturn.transform.position;
