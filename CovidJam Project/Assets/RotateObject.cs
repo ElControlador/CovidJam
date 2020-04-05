@@ -24,6 +24,9 @@ public class RotateObject : MonoBehaviour
         Vector2 direction = (mouseScreenPosition - (Vector2)transform.position).normalized;
 
         // set vector of transform directly
-        transform.right = direction;
+        if (direction.x > 0)
+        {
+            transform.right = direction;
+        }
     }
 }

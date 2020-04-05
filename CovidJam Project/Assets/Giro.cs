@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Giro : MonoBehaviour
 {
+    public Vector2 XD;
     // Update is called once per frame
     void Update()
     {
@@ -22,8 +23,11 @@ public class Giro : MonoBehaviour
 
         // get direction you want to point at
         Vector2 direction = (mouseScreenPosition - (Vector2)transform.position).normalized;
-
+        XD = -direction;
         // set vector of transform directly
-        transform.right = -direction;
+        if (XD.x > 0 )
+        {
+            transform.right = -direction;
+        }
     }
 }
