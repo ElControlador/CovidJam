@@ -7,11 +7,11 @@ public class Reset : MonoBehaviour
 {
     private Scene p;
     private int n;
-    public static bool pause = false;
+    public GameObject Pause;
     // Start is called before the first frame update
     void Start()
     {
-        p = SceneManager.GetActiveScene();
+        
         
     }
 
@@ -20,7 +20,12 @@ public class Reset : MonoBehaviour
     {
        if (Input.GetKeyDown(KeyCode.R))
         {
+            p = SceneManager.GetActiveScene();
             SceneManager.LoadScene(p.name);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
     }
 
@@ -39,6 +44,7 @@ public class Reset : MonoBehaviour
     }
     public void pausa()
     {
-        pause = true;
+        Time.timeScale = 0f;
+        Pause.SetActive(true);
     }
 }

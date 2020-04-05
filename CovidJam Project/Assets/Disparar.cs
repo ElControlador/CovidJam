@@ -13,7 +13,7 @@ public class Disparar : MonoBehaviour
     {
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (Input.GetMouseButtonUp(0))
         {

@@ -7,16 +7,15 @@ public class Repetir : MonoBehaviour
 {
     // Start is called before the first frame 
     private float counter = 0;
-    private Scene p;
+    private Ganar ganar;
     // Update is called once per frame
     void Update()
     {
         counter += Time.deltaTime;
         if (counter >= 2)
         {
-            p = SceneManager.GetActiveScene();
-
-            SceneManager.LoadScene(p.name);
+            ganar = GameObject.Find("Canvas").GetComponent<Ganar>();
+            ganar.perder();
         }
     }
 }
