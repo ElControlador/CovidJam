@@ -6,8 +6,8 @@ public class Disparar : MonoBehaviour
 {
     public Transform ball;
     public Rigidbody2D ball_rigidBody;
-    private bool is_launched;
-    private float VELOCITY = 12f;
+    public static bool is_launched;
+    private float VELOCITY = 24f;
 
     private void Awake()
     {

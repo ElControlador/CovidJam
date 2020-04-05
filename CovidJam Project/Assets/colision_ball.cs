@@ -32,6 +32,7 @@ public class colision_ball : MonoBehaviour
                 padre.SetActive(false);
                 padre.transform.position = posini;
                 gameObject.transform.position = posini;
+                Disparar.is_launched = false;
                 padre.SetActive(true);
             //}
             // Destroy(gameObject);
