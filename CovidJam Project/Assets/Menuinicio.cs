@@ -24,7 +24,7 @@ public class Menuinicio : MonoBehaviour
     {
         p = SceneManager.GetActiveScene();
         n = p.buildIndex;
-        SceneManager.LoadScene(n + 1);
+        SceneManager.LoadScene("nivel1");
     }
     
     public void Howtoplay()
