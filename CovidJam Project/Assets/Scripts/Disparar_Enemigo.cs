@@ -9,6 +9,7 @@ public class Disparar_Enemigo : MonoBehaviour
     public GameObject dots;
     public static bool is_launched_benemigo;
     private float VELOCITY = 24f;
+    private float counter = 0;
     //private float timer;
     private void Start()
     {
@@ -18,28 +19,32 @@ public class Disparar_Enemigo : MonoBehaviour
         {
            timer = timer + Time.deltaTime;
         }*/
+        counter = 1;
     }
-
-    private void Update()
+    private void LateUpdate()
     {
-      
-            if (Input.GetMouseButtonUp(0))
-            {
-                is_launched_benemigo = true;
-            }
+        if (Input.GetMouseButtonUp(0))
+        {
+            is_launched_benemigo = true;
+        }
 
-            if (is_launched_benemigo && Reset.pausado == false)
-            {
-                Launch();
-            }
-            if (Reset.pausado == true)
-            {
-                is_launched_benemigo = false;
-            }
-        
+        if (is_launched_benemigo && Reset.pausado == false && counter <= 0)
+        {
+            Launch();
+        }
+        if (Reset.pausado == true)
+        {
+            is_launched_benemigo = false;
+            counter = 1;
+        }
+
+        if (counter > 0 && Reset.pausado == false)
+        {
+            counter = counter - Time.deltaTime;
+            is_launched_benemigo = false;
+        }
+
     }
-
-
     private void Launch()
     {
         ball.gameObject.SetActive(true);

@@ -102,7 +102,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!1 &6093945481591547878
 GameObject:
@@ -259,7 +259,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!233 &6093945481901950186
 HingeJoint2D:
@@ -367,6 +367,11 @@ PrefabInstance:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 865358099458752036}
+    - target: {fileID: 6381694936682455673, guid: f0c1722148e2f644da16e3f1bca45fe8,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c1722148e2f644da16e3f1bca45fe8, type: 3}
 --- !u!4 &865358100344882012 stripped
@@ -463,6 +468,11 @@ PrefabInstance:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 6093945480679490447}
+    - target: {fileID: 6381694936682455673, guid: f0c1722148e2f644da16e3f1bca45fe8,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c1722148e2f644da16e3f1bca45fe8, type: 3}
 --- !u!4 &865358100072925106 stripped
@@ -559,6 +569,11 @@ PrefabInstance:
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 865358100072925116}
+    - target: {fileID: 6381694936682455673, guid: f0c1722148e2f644da16e3f1bca45fe8,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6381694936682455674, guid: f0c1722148e2f644da16e3f1bca45fe8,
         type: 3}
       propertyPath: m_Sprite

@@ -383,6 +383,7 @@ MonoBehaviour:
   padre: {fileID: 3544148326777442420}
   pistolero: {fileID: 0}
   posreturn: {fileID: 0}
+  sangre: {fileID: 0}
   dots: {fileID: 0}
 --- !u!1 &3544148326777442420
 GameObject:

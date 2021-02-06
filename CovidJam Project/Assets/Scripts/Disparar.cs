@@ -9,9 +9,11 @@ public class Disparar : MonoBehaviour
     public GameObject dots;
     public static bool is_launched_bplayer;
     private float VELOCITY = 24f;
+    private float counter=0;
 
     private void Awake()
     {
+        counter = 1;
     }
 
     private void LateUpdate()
@@ -21,14 +23,22 @@ public class Disparar : MonoBehaviour
             is_launched_bplayer = true;
         }
 
-        if (is_launched_bplayer && Reset.pausado == false)
+        if (is_launched_bplayer && Reset.pausado == false && counter <= 0)
         {
             Launch();
         }
         if(Reset.pausado == true)
         {
             is_launched_bplayer = false;
+            counter = 1;
         }
+
+        if (counter > 0 && Reset.pausado==false)
+        {
+            counter = counter - Time.deltaTime;
+            is_launched_bplayer = false;
+        }
+
     }
 
 

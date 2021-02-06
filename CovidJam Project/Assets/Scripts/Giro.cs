@@ -27,7 +27,7 @@ public class Giro : MonoBehaviour
             Vector2 direction = (mouseScreenPosition - (Vector2)transform.position).normalized;
             XD = -direction;
             // set vector of transform directly
-            if (XD.x > 0)
+            if (XD.x > 0 &&Reset.pausado==false)
             {
                 transform.right = -direction;
             }
